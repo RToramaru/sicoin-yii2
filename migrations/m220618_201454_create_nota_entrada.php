@@ -13,7 +13,7 @@ class m220618_201454_create_nota_entrada extends Migration
     public function safeUp()
     {
         $this->createTable('nota_entrada', [
-            'codigo' => $this->integer()->notNull(),
+            'codigo' => $this->integer()->notNull()->unique(),
             'origem' => $this->integer()->notNull(),
             'destino' =>  $this->integer(),
             'emissao' => $this->date()->notNull(),
